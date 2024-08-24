@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader">
+        <div class="cell d-0"></div>
+        <div class="cell d-1"></div>
+        <div class="cell d-2"></div>
+      
+        <div class="cell d-1"></div>
+        <div class="cell d-2"></div>
+        
+        <div class="cell d-2"></div>
+        <div class="cell d-3"></div>
+        
+        <div class="cell d-3"></div>
+        <div class="cell d-4"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" style="display: none;">
+        <!-- Your existing HTML content goes here -->
+        <!-- Navigation Bar -->
+        <nav>
+            <div class="brand-name">
+                <a href="#home">Saiful Sifat</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="mailto:sifat.sai3@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.facebook.com/saiful.sifat1234" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/your-profile" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/SAIFUL-SIFAT" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </nav>
+
+        <!-- Home Section -->
+        <section id="home" class="section">
+            <div class="floating-pic">
+                <img src="sifat.png" alt="Floating Picture">
+            </div>
+            <h1>Welcome to My Portfolio</h1>
+            <p>I'm <span id="name"></span>, a <span id="profession"></span>.</p>
+            <p>lorem is adadagfagadaf a af af ajdoaj daifa sio faoifaa fioa fddajjfap jfpao fhais f hsoahasf uao faoifaifhao fawyuf ayftgyerao dadosxm bcuaygwhaio afagodua fa ajfaoifhjasfg af.</p>
+            <button class="button">
+              <p>Download CV</p>
+            </button>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <div class="about-container">
+                <div class="left-panel">
+                    <button class="tablinks" onclick="openTab(event, 'Education')">Education</button>
+                    <button class="tablinks" onclick="openTab(event, 'Skills')">Skills</button>
+                    <button class="tablinks" onclick="openTab(event, 'Experience')">Experience</button>
+                </div>
+                <div class="right-panel">
+                    <div id="Education" class="tabcontent">
+                        <h3>Education</h3>
+                        <p>School: MMHS</p>
+                        <p>College: ICD</p>
+                        <p>University: AIUB</p>
+                    </div>
+                    <div id="Skills" class="tabcontent">
+                        <h3>Skills</h3>
+                        <p>Problem Solving</p>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 80%;"></div>
+                        </div>
+                        <p>C++</p>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 75%;"></div>
+                        </div>
+                        <p>Python</p>
+                        <div class="skill-bar">
+                            <div class="skill-level" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div id="Experience" class="tabcontent">
+                        <h3>Experience</h3>
+                        <p>No experience yet.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section 
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="project-cards">
+                <div class="card">
+                    <div class="card__descr-wrapper">
+                        <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.66A7.83 7.83 0 0 1 19.66 12C19.66 17.34 15.34 22 10 22 4.66 22 0 17.34 0 12 0 6.66 4.66 2 10 2 15.34 2 19.66 6.66 19.66 12zM10 16a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2 2 2 0 0 1 2 2v6a2 2 0 0 1-2 2z"/></svg>
+                        <h3 class="card__title">Project 1</h3>
+                        <p class="card__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <div class="card__links">
+                        <a class="link" href="#">GitHub</a>
+                        <a class="link" href="#">Live Demo</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__descr-wrapper">
+                        <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 5.66A7.83 7.83 0 0 1 19.66 12C19.66 17.34 15.34 22 10 22 4.66 22 0 17.34 0 12 0 6.66 4.66 2 10 2 15.34 2 19.66 6.66 19.66 12zM10 16a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2 2 2 0 0 1 2 2v6a2 2 0 0 1-2 2z"/></svg>
+                        <h3 class="card__title">Project 2</h3>
+                        <p class="card__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <div class="card__links">
+                        <a class="link" href="#">GitHub</a>
+                        <a class="link" href="#">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+        </section>-->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+
+</html>
