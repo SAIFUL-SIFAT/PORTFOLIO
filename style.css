@@ -204,6 +204,9 @@ nav ul li a:hover {
     align-items: center;
     margin : 0 400px 0 400px;
 }
+span {
+    color: #64ffda;
+}
 .section {
     position: relative;
     padding-top: 100px; /* Adjust based on your image height */
@@ -300,7 +303,7 @@ nav ul li a:hover {
     height: 50vh;
     justify-content: center;
     align-items: flex-start;
-    margin : 40px
+    margin : 20px
 }
 
 .left-panel {
@@ -309,7 +312,7 @@ nav ul li a:hover {
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
-    margin: 40px 0 0 450px;
+    margin: 50px 0 0 450px;
 }
 
 .left-panel button {
@@ -334,7 +337,7 @@ nav ul li a:hover {
 }
 h3 {
     display: block;
-    font-size: 1.0em;
+    font-size: 1.2em;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
@@ -342,6 +345,8 @@ h3 {
     font-weight: bold;
     unicode-bidi: isolate;
 }
+
+
 
 .tabcontent {
     display: none;
@@ -367,24 +372,34 @@ h3 {
 
 /*  Section */
 
+.section {
+    text-align: center;
+    padding: 60px 0;
+    position: relative;
+}
+
+.project-cards {
+    display: flex;
+    justify-content: center; /* Center the cards horizontally */
+    align-items: center; /* Center the cards vertically */
+    flex-wrap: wrap; /* Wrap the cards if necessary */
+}
 
 .card {
     --font-color: #959595;
     --bg-color: #0a192f;
     width: 300px;
-    height: auto;
     border-radius: 20px;
     background: var(--bg-color);
     box-shadow: -9px 9px 18px #5a5a5a,
-                 9px -9px 18px #ffffff;
+                9px -9px 18px #ffffff;
     display: flex;
     flex-direction: column;
     transition: .4s;
-    position: relative; 
-
     padding: 20px;
-    margin: 10px; /* Add margin to create spacing between cards */
+    margin: 20px; /* Add margin to create spacing between cards */
 }
+
 .card:hover {
     transform: scale(1.02);
     box-shadow: 0px 0px 10px 2px #5a5a5a;
@@ -393,7 +408,7 @@ h3 {
 .card__descr-wrapper {
     padding: 15px;
     display: grid;
-    align-items: center; /* Added property */
+    align-items: center;
 }
 
 .card__title {
@@ -401,12 +416,12 @@ h3 {
     text-align: center;
     margin-bottom: 15px;
     font-weight: 900;
-    font-size: 20px; /* Adjust font size as needed */
+    font-size: 20px;
 }
 
 .card__descr {
     color: var(--font-color);
-    font-size: 16px; /* Adjust font size as needed */
+    font-size: 16px;
 }
 
 .svg {
@@ -433,3 +448,59 @@ h3 {
 .card__links .link:hover {
     text-decoration: underline;
 }
+
+
+/* From Uiverse.io by vinodjangid07 */ 
+.Btn {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(#44ea76, #39fad7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    border: none;
+  }
+  
+  .arrow path {
+    fill: white;
+  }
+  
+  .text {
+    font-size: 0.7em;
+    width: 100px;
+    position: absolute;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: -18px;
+    opacity: 0;
+    transition-duration: .7s;
+    font-size: 14px;
+
+  }
+  
+  .Btn:hover .text {
+    opacity: 1;
+    transition-duration: .7s;
+  }
+  
+  .Btn:hover .arrow {
+    animation: slide-in-bottom .7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+  
+  @keyframes slide-in-bottom {
+    0% {
+      transform: translateY(10px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
