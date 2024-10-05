@@ -128,3 +128,32 @@ window.addEventListener('load', function() {
 
 window.addEventListener('scroll', revealOnScroll);
 revealOnScroll(); // to show elements on load if already in view
+
+ document.querySelector('.Btn').addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Smooth scroll effect
+        });
+    
+});
+// Get the button
+let backToTopBtn = document.getElementById("backToTopBtn");
+
+// Show the button when the user scrolls down 20px from the top
+window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        backToTopBtn.style.display = "block"; // Show the button
+    } else {
+        backToTopBtn.style.display = "none"; // Hide the button
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+backToTopBtn.onclick = function() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+};
