@@ -26,79 +26,34 @@
     animation: 1.5s ripple ease infinite;
 }
 
-.cell.d-1 {
-    animation-delay: 100ms;
-}
+.cell.d-1 { animation-delay: 100ms; }
+.cell.d-2 { animation-delay: 200ms; }
+.cell.d-3 { animation-delay: 300ms; }
+.cell.d-4 { animation-delay: 400ms; }
 
-.cell.d-2 {
-    animation-delay: 200ms;
-}
-
-.cell.d-3 {
-    animation-delay: 300ms;
-}
-
-.cell.d-4 {
-    animation-delay: 400ms;
-}
-
-.cell:nth-child(1) {
-    --cell-color: #00FF87;
-}
-
-.cell:nth-child(2) {
-    --cell-color: #0CFD95;
-}
-
-.cell:nth-child(3) {
-    --cell-color: #17FBA2;
-}
-
-.cell:nth-child(4) {
-    --cell-color: #23F9B2;
-}
-
-.cell:nth-child(5) {
-    --cell-color: #30F7C3;
-}
-
-.cell:nth-child(6) {
-    --cell-color: #3DF5D4;
-}
-
-.cell:nth-child(7) {
-    --cell-color: #45F4DE;
-}
-
-.cell:nth-child(8) {
-    --cell-color: #53F1F0;
-}
-
-.cell:nth-child(9) {
-    --cell-color: #60EFFF;
-}
+.cell:nth-child(1) { --cell-color: #00FF87; }
+.cell:nth-child(2) { --cell-color: #0CFD95; }
+.cell:nth-child(3) { --cell-color: #17FBA2; }
+.cell:nth-child(4) { --cell-color: #23F9B2; }
+.cell:nth-child(5) { --cell-color: #30F7C3; }
+.cell:nth-child(6) { --cell-color: #3DF5D4; }
+.cell:nth-child(7) { --cell-color: #45F4DE; }
+.cell:nth-child(8) { --cell-color: #53F1F0; }
+.cell:nth-child(9) { --cell-color: #60EFFF; }
 
 /* Animation */
 @keyframes ripple {
-    0% {
-        background-color: transparent;
-    }
-    30% {
-        background-color: var(--cell-color);
-    }
-    60% {
-        background-color: transparent;
-    }
-    100% {
-        background-color: transparent;
-    }
+    0% { background-color: transparent; }
+    30% { background-color: var(--cell-color); }
+    60% { background-color: transparent; }
+    100% { background-color: transparent; }
 }
 
 #main-content {
     display: none;
 }
 
-/* General Styles  #0a192f;*/
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #0a192f;
@@ -131,7 +86,7 @@ nav {
     background-color: #0a192f;
 }
 
-.brand-name a{
+.brand-name a {
     color: #ccd6f6;
     text-decoration: none;
     font-size: 1.5em;
@@ -139,6 +94,7 @@ nav {
     margin-left: 30px;
     margin-bottom: 20px;
 }
+
 .brand-name {
     margin-bottom: 10px;
     margin-left: 50px;
@@ -166,17 +122,6 @@ nav ul li a:hover {
     color: #64ffda;
 }
 
-.social-icons a {
-    color: #ccd6f6;
-    margin-left: 15px;
-    font-size: 1.2em;
-}
-
-.social-icons a:hover {
-    color: #64ffda;
-}
-
-/* Social Icons Styles */
 .social-icons {
     display: flex;
     align-items: center;
@@ -187,7 +132,6 @@ nav ul li a:hover {
     color: #ccd6f6;
     margin: 0 10px;
     font-size: 1.5em;
-    text-decoration: none;
 }
 
 .social-icons a:hover {
@@ -202,17 +146,17 @@ nav ul li a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin : 0 400px 0 400px;
+    padding: 0 100px;
 }
+
 span {
     color: #64ffda;
 }
+
 .section {
     position: relative;
     padding-top: 100px; /* Adjust based on your image height */
 }
-
-/* Ensure this CSS is applied after your existing styles */
 
 .floating-pic {
     position: absolute; /* Position relative to the section */
@@ -230,8 +174,7 @@ span {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds shadow for a floating effect */
 }
 
-
-/* From Uiverse.io by Randdose */ 
+/* Button Styles */
 .button {
     all: unset;
     display: flex;
@@ -247,21 +190,21 @@ span {
     overflow: hidden;
     transition: border 300ms, color 300ms;
     user-select: none;
-  }
-  
-  .button p {
+}
+
+.button p {
     z-index: 1;
-  }
-  
-  .button:hover {
+}
+
+.button:hover {
     color: #212121;
-  }
-  
-  .button:active {
+}
+
+.button:active {
     border-color: teal;
-  }
-  
-  .button::after, .button::before {
+}
+
+.button::after, .button::before {
     content: "";
     position: absolute;
     width: 9em;
@@ -270,32 +213,30 @@ span {
     opacity: 50%;
     border-radius: 50%;
     transition: transform 500ms, background 300ms;
-  }
-  
-  .button::before {
+}
+
+.button::before {
     left: 0;
     transform: translateX(-8em);
-  }
-  
-  .button::after {
+}
+
+.button::after {
     right: 0;
     transform: translateX(8em);
-  }
-  
-  .button:hover:before {
+}
+
+.button:hover:before {
     transform: translateX(-1em);
-  }
-  
-  .button:hover:after {
+}
+
+.button:hover:after {
     transform: translateX(1em);
-  }
-  
-  .button:active:before,
-  .button:active:after {
+}
+
+.button:active:before,
+.button:active:after {
     background: teal;
-  }
-
-
+}
 
 /* About Section */
 .about-container {
@@ -303,7 +244,7 @@ span {
     height: 50vh;
     justify-content: center;
     align-items: flex-start;
-    margin : 20px
+    margin: 20px;
 }
 
 .left-panel {
@@ -324,17 +265,15 @@ span {
     cursor: pointer;
 }
 
-
-
 .left-panel button:hover {
     color: #8892b0;
 }
 
 .right-panel {
     flex: 2;
-   
-    margin:40px 200px 0 0;
+    margin: 40px 200px 0 0;
 }
+
 h3 {
     display: block;
     font-size: 1.2em;
@@ -345,8 +284,6 @@ h3 {
     font-weight: bold;
     unicode-bidi: isolate;
 }
-
-
 
 .tabcontent {
     display: none;
@@ -370,8 +307,7 @@ h3 {
     border-radius: 5px;
 }
 
-/*  Section */
-
+/* Section */
 .section {
     text-align: center;
     padding: 60px 0;
@@ -391,8 +327,7 @@ h3 {
     width: 300px;
     border-radius: 20px;
     background: var(--bg-color);
-    box-shadow: -9px 9px 18px #5a5a5a,
-                9px -9px 18px #ffffff;
+    box-shadow: -9px 9px 18px #5a5a5a;
     display: flex;
     flex-direction: column;
     transition: .4s;
@@ -448,59 +383,127 @@ h3 {
 .card__links .link:hover {
     text-decoration: underline;
 }
-
-
-/* From Uiverse.io by vinodjangid07 */ 
-.Btn {
-    width: 45px;
-    height: 45px;
-    background: linear-gradient(#44ea76, #39fad7);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    cursor: pointer;
-    position: relative;
+#backToTopBtn {
+    display: none; /* Initially hidden */
+    position: fixed; /* Fixed position at the bottom-right corner */
+    bottom: 20px;
+    right: 30px;
+    z-index: 99; /* On top of other elements */
+    font-size: 18px;
     border: none;
-  }
-  
-  .arrow path {
-    fill: white;
-  }
-  
-  .text {
-    font-size: 0.7em;
-    width: 100px;
-    position: absolute;
+    outline: none;
+    background-color: #64ffda; /* Your requested color */
     color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    bottom: -18px;
-    opacity: 0;
-    transition-duration: .7s;
-    font-size: 14px;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
 
-  }
-  
-  .Btn:hover .text {
-    opacity: 1;
-    transition-duration: .7s;
-  }
-  
-  .Btn:hover .arrow {
-    animation: slide-in-bottom .7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  }
-  
-  @keyframes slide-in-bottom {
+#backToTopBtn:hover {
+    background-color: #555; /* Slightly darker on hover */
+}
+
+
+@keyframes slide-in-bottom {
     0% {
-      transform: translateY(10px);
-      opacity: 0;
+        transform: translateY(10px);
+        opacity: 0;
     }
-  
     100% {
-      transform: translateY(0);
-      opacity: 1;
+        transform: translateY(0);
+        opacity: 1;
     }
-  }
-  
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    #home {
+        margin: 0 100px;
+    }
+    .left-panel {
+        margin: 50px 0 0 100px;
+    }
+    .right-panel {
+        margin: 40px 50px 0 0;
+    }
+}
+
+@media (max-width: 992px) {
+    .loader {
+        --cell-size: 40px;
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+    p {
+        font-size: 1.5em;
+    }
+    nav ul li {
+        margin: 0 10px;
+    }
+    #home {
+        margin: 0 20px;
+    }
+    .left-panel {
+        margin: 50px 0 0 20px;
+    }
+    .right-panel {
+        margin: 40px 20px 0 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .loader {
+        --cell-size: 30px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    p {
+        font-size: 1.2em;
+    }
+    .about-container {
+        flex-direction: column;
+    }
+    .left-panel, .right-panel {
+        margin: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .loader {
+        --cell-size: 25px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    p {
+        font-size: 1em;
+    }
+    .card {
+        width: 90%; /* Make cards responsive */
+    }
+}
+/* Back to Top Button Styles */
+#backToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99; /* Ensure it's on top of other elements */
+    font-size: 18px;
+    background-color: #64ffda; /* Button color */
+    color: #0a192f;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s;
+    display: none; /* Initially hidden */
+}
+
+#backToTopBtn:hover {
+    background-color: #53f1f0; /* Slight color change on hover */
+}
